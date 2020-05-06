@@ -1,4 +1,4 @@
-class person{
+class Person{
     constructor(name,age,gender,interests){
         this.name = name
         this.age = age
@@ -24,8 +24,8 @@ class person{
         return greet
     }
 }
-module.exports = {person}
-let being = new person("Siya",30,"male",["agile"])
+module.exports = {Person}
+let being = new Person("Ryan",30,"male",['hardarse','agile','ssd harddrive'])
 console.log(being.name)
 
 

@@ -1,17 +1,26 @@
-const {person} = require("../src/Person")
+const {Person} = require("../src/person")
+const person = new Person("Ryan",30,"male",['hardarse','agile','ssd harddrive'])
 
-const inst = new person("Siya",30,"male",["agile",'ssd'])
-describe("instanceOfPerson",function(){
-    it("Should check if a person name is the same as the name which was passed to person class",function(){
-        expect(inst.name).toEqual("Siya")        
+describe("Person ",function(){
+    it("Should give a name",() =>{
+        expect(person.name).toEqual("Ryan")        
     })
-    it("Should check if a person age is the same as the age which was passed to person class",function(){
-        expect(inst.age).toEqual(30)
+
+    it("Should give an age",() =>{
+        expect(person.age).toEqual(30)
     })
-    it("Should check if a person gengder is the same as the gender which was passed to person class",function(){
-        expect(inst.gender).toEqual('male')
+
+    it("Should give a gender",() =>{
+        expect(person.gender).toEqual('male')
     })
-    it("Should check if a person interests are the same as the interests which ware passed to person class",function(){
-        expect(inst.interests).toEqual(['agile','ssd'])
+    
+    it("Should give interests",() =>{
+        expect(person.interests).toEqual(['hardarse','agile','ssd harddrive'])
+    })
+})
+
+describe("Hello method",() => {
+    it("Should greet",() =>{
+        expect(person.hello()).toBe("Hello, my name is Ryan and I am 30 years old. My interests are being a hardarse, agile and ssd harddrive.")
     })
 })
